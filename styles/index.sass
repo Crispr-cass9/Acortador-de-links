@@ -1,0 +1,184 @@
+
+// Colores 
+
+$Cyan: hsl(180, 66%, 49%)
+$Dark-Violet: hsl(257, 27%, 26%)
+$Red: hsl(0, 87%, 67%)
+$Gray: hsl(0, 0%, 75%)
+$Grayish-Violet: hsl(257, 7%, 63%)
+$Very-Dark-Blue: hsl(255, 11%, 22%)
+$Very-Dark-Violet: hsl(260, 8%, 14%)
+
+// Variable para controlar el padding de los laterales
+
+$espacio-lateral: 250px
+
+@mixin generic-btn($border-radius, $font-size)
+    background-color: $Cyan
+    padding: 7px 18px
+    border-radius: $border-radius
+    color: white  
+    transition: background-color .2s ease-in-out
+    border: none
+    font-weight: 800
+    letter-spacing: 1px
+    font-size: $font-size
+
+
+    &:hover
+        background-color:  hsl(180, 66%, 65%) 
+    
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: "Poppins", sans-serif
+    color: $Very-Dark-Blue
+
+body
+    display: flex
+    flex-direction: column
+    align-items: center
+
+header
+    height: 85px
+    width: 100%
+    display: flex
+    flex-direction: row
+    padding: 0 $espacio-lateral
+    align-items: center
+    justify-content: space-between
+
+#logo-nav
+    display: flex
+    flex-direction: row
+    gap: 45px
+
+
+    h2
+        color: $Very-Dark-Blue
+        font-size: 40px
+
+    nav
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        gap: 20px
+        
+        a
+            text-decoration: none
+            font-size: 20px
+            color: $Grayish-Violet
+            font-weight: 700
+            letter-spacing: 1px
+            transition: color .2s ease-in-out
+
+            &:hover
+                color: $Dark-Violet
+
+#usuario-entrada
+    
+    display: flex
+    flex-direction: row
+    gap: 30px
+    align-items: center
+
+    a
+        text-decoration: none
+        font-size: 20px
+        color: $Grayish-Violet
+        font-weight: 700
+        letter-spacing: 1px
+    
+    a:nth-child(1)
+        transition: color .2s ease-in-out
+
+        &:hover
+            color: $Dark-Violet
+
+    a:nth-child(2)
+        background-color: $Cyan
+        padding: 7px 18px
+        border-radius: 50px
+        color: white  
+        transition: background-color .2s ease-in-out
+
+        &:hover
+            background-color:  hsl(180, 66%, 65%) 
+
+#seccion-principal
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 50px 0 0 $espacio-lateral
+    overflow: hidden
+    width: 100%
+
+    img
+        position: relative
+        right: -70px
+
+
+#texto
+    display: flex
+    flex-direction: column
+    width: 33%
+    min-width: 550px
+
+    #titulo
+        font-size: 70px
+        font-weight: 800
+        line-height: 80px
+    
+    #contenido
+        font-size: 20px
+        color: $Gray
+        font-weight: 700
+        margin: 5px 0 30px 0
+
+    button
+        @include generic-btn(50px, 20px)
+        width: 200px
+        
+#seccion-input
+    background-image: url('../images/bg-shorten-desktop.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-color: $Dark-Violet
+    height: fit-content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: calc( 100vw - $espacio-lateral*2 )
+    height: 20vh
+    border-radius: 15px
+
+#contenedor-input-btn
+    width: 95%
+    display: flex
+    gap: 40px
+    height: fit-content
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+    input
+        border: none
+        outline: none
+        height: 60px
+        border-radius: 10px
+        width: 80%
+        padding: 0 30px
+        font-size: 20px
+
+    button
+        @include generic-btn(10px, 20px)
+        height: 100%
+        width: 15%
+        
+
+
