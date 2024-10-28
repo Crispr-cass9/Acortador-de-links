@@ -23,6 +23,7 @@ $espacio-lateral: 250px
     font-weight: 800
     letter-spacing: 1px
     font-size: $font-size
+    cursor: pointer
 
 
     &:hover
@@ -142,6 +143,14 @@ header
     button
         @include generic-btn(50px, 20px)
         width: 200px
+
+#contenedor-fondo-color
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 200px
+    background-color: #f0f1f6
         
 #seccion-input
     background-image: url('../images/bg-shorten-desktop.svg')
@@ -156,6 +165,8 @@ header
     width: calc( 100vw - $espacio-lateral*2 )
     height: 20vh
     border-radius: 15px
+    position: relative
+    margin-top: -100px
 
 #contenedor-input-btn
     width: 95%
@@ -179,6 +190,221 @@ header
         @include generic-btn(10px, 20px)
         height: 100%
         width: 15%
+    
+.error
+    position: absolute
+    color: red
+    font-weight: 400
+    font-size: 20px
+    left: 4%
+    bottom: 15%
+    display: none   
+
+#seccion-links-acortados
+    width: 100%
+    padding: 0 $espacio-lateral
+    height: fit-content
+
+    .contenedor-link-acortado
+        width: 100%
+        margin-top: 50px
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        padding: 0 30px
+        height: 70px
+        background-color: white
+        border-radius: 10px
+
+    .link-original
+        font-size: 20px
+        font-weight: 500
+        letter-spacing: 1px
+
+    .resultado-copiar
+        display: flex
+        flex-direction: row
+        height: 100%
+        gap: 40px
+        align-items: center
+
+        .link-acortado
+            font-size: 20px
+            color: $Cyan
+            font-weight: 700
+
+        .btn-copiar
+            background-color: $Cyan
+            height: 70%
+            width: 80px
+            border-radius: 10px
+            border: none
+            color: white
+            font-weight: 800
+            font-size: 18px
+            letter-spacing: 1px
+            cursor: pointer
+
+
+#seccion-estadisticas-avanzadas
+    margin-top: 15vh
+    width: 100%
+    padding: 0 $espacio-lateral
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    h3
+        text-align: center
+        font-size: 50px
+        margin-bottom: 10px
+
+    h4
+        text-align: center
+        font-size: 23px
+        color: $Gray
+        width: 50%  
+        margin-bottom: 20px
+        line-height: 35px
+        font-weight: 500
+
+
+#seccion-tarjetas
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    height: 50vh
+    width: 100%
+    gap: 30px
+
+    hr
+        width: 60%
+        border: solid $Cyan 4px
+        border-radius: 10px
+        position: absolute
+
+    .contenedor-tarjeta
+        background-color: white
+        width: 20%
+        aspect-ratio: 4/3
+        position: relative
+        z-index: 10
+        padding: 30px
+    
+    .circulo
+        width: 80px
+        aspect-ratio: 1/1
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: $Dark-Violet
+        position: absolute
+        top: -15%
+
+    .titulo-tarjeta
+        margin: 40px 0 20px 0
+        font-size: 22px
+        letter-spacing: 1px
+    
+    p
+        letter-spacing: 1px
+        color: $Gray
+        font-weight: 700
+        font-size: 17px
+        line-height: 25px
+
+    .contenedor-tarjeta:nth-child(4)
+        margin-top: 100px
+
+    .contenedor-tarjeta:nth-child(2)
+        margin-bottom: 100px
+    
+#seccion-boost
+    width: 100%
+    height: 300px
+    background-image: url('../images/bg-boost-desktop.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-color: $Dark-Violet
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    h2
+        font-size: 50px
+        font-weight: 800
+        color: white
+        letter-spacing: 1px
+        text-shadow: 4px 4px 4px black
+    
+    button
+        @include generic-btn(40px, 25px)
+        margin-top: 30px
+    
+footer
+    width: 100vw
+    height: 30vh
+    background-color: $Very-Dark-Violet
+    display: flex
+    flex-direction: row
+    padding: 60px $espacio-lateral 0 $espacio-lateral
+    justify-content: space-between
+
+    h2
+        font-size: 50px
+        text-shadow: 4px 4px 4px black
+        color: white
+
+
+#contenedor-nav-footer-redes
+    display: flex
+    flex-direction: row
+    gap: 120px
+
+    nav
+        display: flex
+        flex-direction: row
+        gap: 60px
+
+        .submenu
+            display: flex
+            flex-direction: column
+            gap: 15px
+
+            h4
+                color: white
+                font-size: 20px
+            
+            a
+                color: $Gray
+                text-decoration: none
+                transition: color .1s ease-in-out
+
+                &:hover
+                    color: $Cyan
+#contenedor-redes
+    display: flex
+    flex-direction: row
+    gap: 30px
+
+    svg
         
+        cursor: pointer
 
+        path
+            width: 40px !important
+            height: 40px !important
+            transition: fill .1s ease-in-out
 
+        &:hover path
+            fill: $Cyan
+            
+    
+    
+.attribution
+    display: none
+        
